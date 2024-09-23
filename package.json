@@ -28,6 +28,7 @@
     "@clerk/clerk-sdk-node": "^5.0.28",
     "@types/axios": "^0.9.36",
     "@types/firebase": "^2.4.32",
+    "@vercel/node": "^3.2.15",
     "algoliasearch": "^4.24.0",
     "axios": "^1.7.7",
     "cors": "^2.8.5",

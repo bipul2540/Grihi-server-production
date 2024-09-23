@@ -1,4 +1,5 @@
 import express, { Request, Response, NextFunction } from "express";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 import "dotenv/config";
 import storeRoutes from "../routes/storeRoutes";
 import storeProductRoutes from "../routes/storeProductRoute";
@@ -99,4 +100,6 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-export default app;
+export default (req: VercelRequest, res: VercelResponse) => {
+  app(req, res);
+};
