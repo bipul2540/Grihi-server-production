@@ -50,7 +50,7 @@ app.use("/", (req, res) => {
   return res.status(200).json({ data: "htllo world testing" });
 });
 
-app.use("/hello", (req, res) => {
+app.use("/api/hello", (req, res) => {
   return res.status(200).json({ data: "this is my data 2" });
 });
 app.use("/api/admin/stores", storeRoutes);
