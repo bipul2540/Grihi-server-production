@@ -1,6 +1,5 @@
 import express, { Request, Response, NextFunction } from "express";
 import "dotenv/config";
-import * as functions from "firebase-functions";
 import storeRoutes from "../routes/storeRoutes";
 import storeProductRoutes from "../routes/storeProductRoute";
 import storeProductSearchRoute from "../routes/storeProductSearchRoute";
@@ -15,7 +14,6 @@ import orderRoute from "../routes/public/orderRoute";
 import searchRoute from "../routes/public/searchRoute";
 import ratingsRoute from "../routes/public/RatingsRoute";
 import suggestionRoute from "../routes/suggestions/suggestionRoute";
-import { corsConfig } from "../config/corsConfig";
 import razorPayRoute from "../routes/razor-pay/razorPayRoute";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -97,4 +95,4 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-export default functions.https.onRequest(app);
+export default app;
