@@ -47,6 +47,9 @@ app.use(express.json());
 app.set("trust proxy", 1);
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/", (req, res) => {
+  return res.status(200).json({ data: "htllo world testing" });
+});
 app.use("/api/admin/stores", storeRoutes);
 app.use("/api/admin/stores", storeProductRoutes);
 app.use("/api/admin/stores", storeProductSearchRoute);
