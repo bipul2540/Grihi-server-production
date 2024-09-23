@@ -1,0 +1,10 @@
+declare module "cors";
+declare module "firebase-admin/app";
+declare module "firebase-admin/firestore";
+declare module "joi";
+declare module "axios";
+declare module "lodash";
+declare module "@clerk/backend";
+declare module "express-rate-limit";
+declare module "natural";
+declare module "algoliasearch";
